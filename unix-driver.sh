@@ -59,6 +59,7 @@ function gitDriver() {
   fi
 }
 
+# Install Tmux
 function tmuxDriver() {
   if [[ "$package_manager" == "apt" ]]; then
     sudo apt-get install -y tmux
