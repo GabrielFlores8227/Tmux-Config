@@ -8,6 +8,13 @@ This repository contains my personal tmux configuration files. Tmux is a termina
 - Tmux Sensible
 - Dracula (with powerline and additional plugins for CPU usage, GPU usage, and RAM usage)
 
+## ⚡ Quick Installation (Beta)
+Streamline the process of configuring Tmux and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Tmux, plugins, and required packages.
+
+```bash
+git clone https://github.com/GabrielFlores8227/Tmux-Config && chmod +x ./Tmux-Config/unix-driver.sh && ./Config-Config/unix-driver.sh
+```
+
 ## 📎 Keybindings
 
 - Copy mode: `Ctrl+Shift+C`
@@ -53,6 +60,14 @@ set -g @plugin 'dracula/tmux'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 ```
+
+ ### License
+
+This script is licensed under the [MIT License](LICENSE).
+
+Feel free to use, modify, and distribute this script as per the terms of the license.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
