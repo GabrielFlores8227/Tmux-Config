@@ -2,14 +2,14 @@
 
 This repository contains my personal tmux configuration files. Tmux is a terminal multiplexer that allows me to manage multiple terminal sessions within a single window. With this configuration, I have customized my tmux setup to enhance my productivity and streamline my workflow.
 
+## ⚠️ Required Packages
+- NerdFonts
+
 ## 📝 List of Plugins
 
 - TPM (Tmux Plugin Manager)
 - Tmux Sensible
 - Dracula (with powerline and additional plugins for CPU usage, GPU usage, and RAM usage)
-
-## ⚠️ Required Packages
-- NerdFonts
 
 ## ⚡ Quick Installation (Beta)
 Streamline the process of configuring Tmux and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Tmux, plugins, and required packages.
