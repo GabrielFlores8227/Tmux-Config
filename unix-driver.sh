@@ -74,6 +74,65 @@ function tmuxDriver() {
   fi
 }
 
+# Install Unzip
+function unzipDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt-get install -y unzip
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y unzip
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm unzip
+elif [[ "$package_manager" == "zipper" ]]; then
+    sudo zipper install unzip
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install unzip
+  fi
+}
+
+
+#Install Curl
+function curlDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt install -y curl
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y curl
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm curl
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y curl
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install curl
+  fi
+}
+
+# Install Wget
+function wgetDriver() {
+  if [[ "$package_manager" == "apt" ]]; then
+    sudo apt-get update \
+    && sudo apt-get install -y wget
+  elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo $package_manager install -y wget
+  elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -S --noconfirm wget
+  elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper install -y wget
+  elif [[ "$package_manager" == "brew" ]]; then
+    brew install wget
+  fi
+}
+
+# Install Nerd-Fonts
+function nerdFontsDriver() {
+    TEMP=$(mktemp)
+    URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/AnonymousPro.zip"
+    
+    if [[ "$package_manager" == "brew" ]]; then
+        curl -L -o $TEMP $URL  && unzip $TEMP -d $HOME/Library/Fonts/
+    else
+        wget -O $TEMP $URL && unzip $TEMP -d $HOME/.fonts
+    fi
+}
+
 function executeDriver() {
       echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
       && eval $2 \
@@ -84,6 +143,10 @@ function executeDriver() {
 #---Main---------------------------------------------------------------------------------------------
 executeDriver "git" "gitDriver"
 executeDriver "tmux" "tmuxDriver"
+executeDriver "curl" "curlDriver"
+executeDriver "wget" "wgetDriver"
+executeDriver "unzip" "unzipDriver"
+executeDriver "nerd-fonts" "nerdFontsDriver"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && chmod +x ~/.tmux/plugins/tpm/tpm && ~/.tmux/plugins/tpm/tpm 
 git clone https://github.com/GabrielFlores8227/Tmux-Config && mv Tmux-Config/.tmux.conf ~/ && tmux source ~/.tmux.conf
 
