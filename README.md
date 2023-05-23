@@ -8,11 +8,14 @@ This repository contains my personal tmux configuration files. Tmux is a termina
 - Tmux Sensible
 - Dracula (with powerline and additional plugins for CPU usage, GPU usage, and RAM usage)
 
+## ⚠️ Required Packages
+- NerdFonts
+
 ## ⚡ Quick Installation (Beta)
 Streamline the process of configuring Tmux and its plugins on Unix systems with the help of `unix-driver.sh`. The script will install Tmux, plugins, and required packages.
 
 ```bash
-git clone https://github.com/GabrielFlores8227/Tmux-Config && chmod +x ./Tmux-Config/unix-driver.sh && ./Config-Config/unix-driver.sh
+git clone https://github.com/GabrielFlores8227/Tmux-Config && chmod +x ./Tmux-Config/unix-driver.sh && ./Tmux-Config/unix-driver.sh
 ```
 
 ## 📎 Keybindings
