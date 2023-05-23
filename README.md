@@ -1,4 +1,4 @@
-# Tmux Configuration
+# Tmux Setup
 
 This repository contains a configuration file for Tmux that includes keybindings and plugins.
 
