@@ -2,7 +2,7 @@
 
 This repository contains a configuration file for Tmux that includes keybindings and plugins.
 
-## Installation
+## ⭐ Installation
 
 ### Windows
 
