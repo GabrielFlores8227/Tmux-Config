@@ -91,7 +91,6 @@ elif [[ "$package_manager" == "zipper" ]]; then
   fi
 }
 
-
 #Install Curl
 function curlDriver() {
   if [[ "$package_manager" == "apt" ]]; then
@@ -135,6 +134,16 @@ function nerdFontsDriver() {
     fi
 }
 
+# Install Tpm
+function tpmDriver() {
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && chmod +x ~/.tmux/plugins/tpm/tpm && ~/.tmux/plugins/tpm/tpm 
+}
+
+# Install Plugins
+function pluginsDriver() {
+  git clone https://github.com/GabrielFlores8227/Tmux-Config && mv Tmux-Config/.tmux.conf ~/ && tmux source ~/.tmux.conf
+}
+
 function executeDriver() {
       echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
       && eval $2 \
@@ -150,6 +159,5 @@ executeDriver "curl" "curlDriver"
 executeDriver "wget" "wgetDriver"
 executeDriver "unzip" "unzipDriver"
 executeDriver "nerd-fonts" "nerdFontsDriver"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && chmod +x ~/.tmux/plugins/tpm/tpm && ~/.tmux/plugins/tpm/tpm 
-git clone https://github.com/GabrielFlores8227/Tmux-Config && mv Tmux-Config/.tmux.conf ~/ && tmux source ~/.tmux.conf
-
+executeDriver "tpm" "tpmDriver"
+executeDriver "plugins" "pluginsDriver"
