@@ -1,5 +1,7 @@
 # ⭐ Tmux Setup
 
+![GIF](https://github.com/GabrielFlores8227/Neovim/blob/main/assets/gif.gif)
+
 This repository contains my personal tmux configuration files. Tmux is a terminal multiplexer that allows me to manage multiple terminal sessions within a single window. With this configuration, I have customized my tmux setup to enhance my productivity and streamline my workflow.
 
 ## ⚠️ Required Packages
