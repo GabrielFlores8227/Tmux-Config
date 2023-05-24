@@ -66,6 +66,16 @@ set -g @plugin 'dracula/tmux'
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
+## ➕ Plus
+
+Copy and paste in .bashrc to make tmux start on terminal launch
+
+```bash
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+```
+
  ### License
 
 This script is licensed under the [MIT License](LICENSE).
