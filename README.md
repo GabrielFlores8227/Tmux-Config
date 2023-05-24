@@ -66,7 +66,7 @@ set -g @plugin 'dracula/tmux'
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
-## ➕ Plus
+## 💡 Plus
 
 Copy and paste in .bashrc to make tmux start on terminal launch
 
