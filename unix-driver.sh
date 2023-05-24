@@ -25,6 +25,7 @@
 ################################################################################
 
 #---Detector-----------------------------------------------------------------------------------------
+
 # Detect the package manager
 if command -v apt >/dev/null; then
   package_manager="apt"
@@ -44,6 +45,7 @@ else
 fi
 
 #---Functions----------------------------------------------------------------------------------------
+
 # Install Git
 function gitDriver() {
   if [[ "$package_manager" == "apt" ]]; then
@@ -141,6 +143,7 @@ function executeDriver() {
 }
 
 #---Main---------------------------------------------------------------------------------------------
+
 executeDriver "git" "gitDriver"
 executeDriver "tmux" "tmuxDriver"
 executeDriver "curl" "curlDriver"
