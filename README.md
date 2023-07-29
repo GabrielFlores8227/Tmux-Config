@@ -1,6 +1,6 @@
 # ⭐ Tmux Setup
 
-![GIF](https://github.com/GabrielFlores8227/Tmux-Config/blob/main/assets/image.gif)
+![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Tmux-Config/image.gif)
 
 This repository contains my personal tmux configuration files. Tmux is a terminal multiplexer that allows me to manage multiple terminal sessions within a single window. With this configuration, I have customized my tmux setup to enhance my productivity and streamline my workflow.
 
