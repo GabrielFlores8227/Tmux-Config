@@ -153,6 +153,19 @@ function executeDriver() {
 
 #---Main---------------------------------------------------------------------------------------------
 
+# Update
+if [[ "$package_manager" == "apt" ]]; then
+    sudo apt-get update
+elif [[ "$package_manager" == "yum" || "$package_manager" == "dnf" ]]; then
+    sudo yum update
+elif [[ "$package_manager" == "pacman" ]]; then
+    sudo pacman -Sy
+elif [[ "$package_manager" == "zypper" ]]; then
+    sudo zypper refresh
+elif [[ "$package_manager" == "brew" ]]; then
+    brew update
+fi
+
 executeDriver "git" "gitDriver"
 executeDriver "tmux" "tmuxDriver"
 executeDriver "curl" "curlDriver"
