@@ -141,7 +141,7 @@ function tpmDriver() {
 
 # Install Plugins
 function pluginsDriver() {
-  git clone https://github.com/GabrielFlores8227/Tmux-Config && mv Tmux-Config/.tmux.conf ~/ && tmux source ~/.tmux.conf
+  curl -o /home/$(whoami)/.tmux.conf https://raw.githubusercontent.com/GabrielFlores8227/Tmux-Config/master/.tmux.conf && tmux source ~/.tmux.conf
 }
 
 function executeDriver() {
