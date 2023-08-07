@@ -141,7 +141,7 @@ function tpmDriver() {
 
 # Install Plugins
 function pluginsDriver() {
-  curl -o /home/$(whoami)/.tmux.conf https://raw.githubusercontent.com/GabrielFlores8227/Tmux-Config/master/.tmux.conf && tmux source ~/.tmux.conf && ~/.tmux/plugins/tpm/bin/install_plugins
+  curl -o /home/$(whoami)/.tmux.conf https://raw.githubusercontent.com/GabrielFlores8227/Tmux-Config/master/.tmux.conf && tmux source ~/.tmux.conf #&& ~/.tmux/plugins/tpm/bin/install_plugins
 
 function executeDriver() {
       echo -e "\n\n\033[0;37;43m[*] Installing $1\033[m" \
