@@ -68,6 +68,8 @@ git clone https://github.com/GabrielFlores8227/Tmux-Config \
 sed -i '1iif command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then exec tmux; fi' ~/.bashrc
 ```
 
+To install the plugins, you simply need to run the tmux command prefix + I (which means pressing Ctrl + b followed by Shift + I). This line tells TPM to install the tmux-resurrect plugin from the tmux-plugins GitHub repository.
+
 ## 📎 Keybindings
 
 - Copy mode: `Ctrl+Shift+C`
