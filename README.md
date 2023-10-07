@@ -46,7 +46,7 @@ The unix-driver.sh script is designed to automate the setup of Tmux and its plug
 
 - [Latest Tmux Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-tmux/latest-tmux.sh)
   
-- [Latest Tpm Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-ypm/latest-tpm.sh)
+- [Latest Tpm Script](https://github.com/GabrielFlores8227/Linux-Packages/blob/main/latest-tpm/latest-tpm.sh)
   
 - [.tmux.conf](https://github.com/GabrielFlores8227/Tmux-Config/blob/main/.tmux.conf) (installed via wget)
 
