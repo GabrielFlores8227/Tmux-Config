@@ -20,16 +20,20 @@ This repository contains my personal tmux configuration files. Tmux is a termina
 
 ![GIF](https://github.com/GabrielFlores8227/GabrielFlores8227/blob/main/global-assets/Tmux-Config/image.gif)
 
-## ⚠️ Required Packages
-- NerdFonts
-
 ## 📝 List of Plugins
 
 - TPM (Tmux Plugin Manager)
+  
 - Tmux Sensible
+  
 - Dracula (with powerline and additional plugins for CPU usage, GPU usage, and RAM usage)
 
+## ⚠️ Required Packages
+
+- NerdFonts
+
 ## ⚡ Quick Installation
+
 The unix-driver.sh script is designed to automate the setup of Tmux and its plugins on Unix systems. This efficient script handles the installation of Tmux, essential plugins, and any required dependencies, all while managing necessary sudo privileges.
 
 ### 📦 Dependencies to be Installed
