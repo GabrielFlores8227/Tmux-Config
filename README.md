@@ -73,10 +73,9 @@ To install the plugins, you simply need to run the tmux command prefix + I (whic
 ## 📎 Keybindings
 
 - Copy mode: `Ctrl+Shift+C`
-- Enable mouse support: `Ctrl+b` followed by `:` and enter `set -g mouse on`
 - Pane navigation:
-  - Vertical split: `Ctrl+b` followed by `v`
-  - Horizontal split: `Ctrl+b` followed by `h`
+  - Vertical split: `Ctrl+v` 
+  - Horizontal split: `Ctrl+h`
 - Switch to the next pane: `Ctrl+s`
 - Status line configuration: The background is set to the default color.
 
