@@ -62,7 +62,7 @@ git clone https://github.com/GabrielFlores8227/Tmux-Config \
 && ./Tmux-Config/linux-driver.sh
 ```
 
-(Optional) This command uses sed to insert the provided script at line 1 of the .bashrc file. This will ensure that it's executed right at the beginning when you open a new terminal session.
+(Optional) This command uses sed to insert a piece of script at line 1 of the .bashrc file. This will ensure that Tmux is executed right at the beginning when you open a new terminal session.
 
 ```bash
 sed -i '1iif command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then exec tmux; fi' ~/.bashrc
